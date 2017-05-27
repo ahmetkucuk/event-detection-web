@@ -44,4 +44,4 @@ if __name__ == '__main__':
 	image_base = app.config["image_dir"]
 	full_disk_detector = FullDiskDetector(app.config["model_dir"])
 
-	app.run()
+	app.run(host='0.0.0.0')
