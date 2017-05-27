@@ -40,7 +40,8 @@ class FullDiskDetector(object):
 		self.preds = tf.nn.softmax(self.logits)
 
 		saver = tf.train.Saver()
-		saver.restore(self.session, tf.train.latest_checkpoint(model_ckpt))
+		print(model_ckpt)
+		saver.restore(self.session, model_ckpt)
 
 	def label_image(self, input_image_path, output_image_path):
 
